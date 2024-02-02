@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </div>
       <div className="buttons">
-        <NavLink to="/contact">
+        <NavLink to="/contact/contact.jsx">
           <button> → Contact me </button>
         </NavLink>
       </div>

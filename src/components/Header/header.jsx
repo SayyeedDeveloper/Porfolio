@@ -167,7 +167,7 @@ const header = () => {
 
       <div className="project-cards">
         <div className="cards">
-          {data.slice(0, 2).map((item, index) => (
+          {data.slice(0, 3).map((item, index) => (
             <a target="blank" href={item.url} key={index}>
               <div
                 className="card"
