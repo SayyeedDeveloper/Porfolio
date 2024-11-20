@@ -14,16 +14,13 @@ function App() {
 
   useEffect(() => {
     const unlisten = history.listen(() => {
-      // Scroll to the top when the route changes
       window.scrollTo(0, 0);
     });
 
-    // Clean up the listener when the component unmounts
     return () => unlisten();
   }, [history]);
 
   useEffect(() => {
-    // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
