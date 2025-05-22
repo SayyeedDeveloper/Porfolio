@@ -6,23 +6,14 @@ import About from "./components/About/about";
 import Contact from "./components/Contact/contact";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { createBrowserHistory } from "history";
 
 function App() {
   const { pathname } = useLocation();
-  const history = createBrowserHistory();
-
-  useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-    });
-
-    return () => unlisten();
-  }, [history]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return (
     <div>
       <Routes>
